@@ -1,0 +1,40 @@
+[0:00 — HOOK]
+Hello everyone. Today, I am excited to show you Crop Doctor AI—a secure, intelligent multi-agent platform designed to help small and medium-scale farmers identify crop diseases early and treat them sustainably.
+
+(pause)
+
+[0:20 — WHAT IT IS]
+Crop Doctor is built on the Gemini Agent Development Kit 2.0. It acts as an ambient AI plant pathologist, combining advanced reasoning workflows with real-time local agricultural catalogs.
+
+(pause)
+
+[0:40 — SHOW THE BANNER]
+(show assets/cover_page_banner.png)
+As you can see from our cover banner, Crop Doctor is designed to be automated, secure, and intelligent. It handles the entire diagnostic process—from intake to security scanning, multi-agent reasoning, and human-in-the-loop review—in a single, unified workflow.
+
+(pause)
+
+[1:00 — ARCHITECTURE]
+(show assets/architecture_diagram.png)
+Let's walk through the architecture. When a farmer submits symptoms, the data passes through our Security Checkpoint first. This node scrubs personal info like phone numbers and checks for injection attacks. 
+
+Once cleared, the Diagnosis Agent analyzes the symptoms, using Model Context Protocol tools to query local databases and assess weather risk patterns. Then, the Treatment Agent constructs a tailored cure roadmap, prioritizing organic remedies. Before anything is finalized, the workflow pauses at the Farmer Review node, waiting for a human decision to approve or adjust the plan.
+
+(pause)
+
+[2:00 — LIVE DEMO]
+(switch to playground or dashboard at http://localhost:8080)
+Let's see it in action. I will click on the "Tomato Early Blight" example on the intake form. Notice how the farmer's email and phone number are entered in the contact field. 
+
+When I click "Analyze Plant Health", our animated pipeline activates. The system scrubs the contact details in the Security Checkpoint, consults our Pathology databases, and compiles the report. Now, the system pauses—it requires my approval as the farmer to finalize the treatment steps. I will click "Approve Plan", and the dashboard loads the full report: a 90% confidence score, detailed treatment steps, organic alternatives, and prevention instructions.
+
+(pause)
+
+[3:00 — SECURITY & MCP]
+(show dashboard Security tab)
+Behind the scenes, we can see the exact raw versus sanitized inputs. Under the hood, the local MCP server handles real-time queries for weather risks, seasonal guidelines, and pesticide alternatives, keeping the agent grounded in facts.
+
+(pause)
+
+[3:30 — IMPACT / CLOSE]
+Crop Doctor AI makes agricultural expertise accessible to any farmer, anywhere, instantly. By emphasizing organic treatments, we help protect local ecosystems, while the security checkpoints ensure the system is completely safe and ready for the real world. Thank you!

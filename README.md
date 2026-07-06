@@ -64,6 +64,8 @@ crop-doctor-agent/
 ├── assets/
 │   ├── architecture_diagram.png
 │   └── cover_page_banner.png
+├── DEMO_SCRIPT.txt            # Verbal presentation script (Phase 8)
+├── SUBMISSION_WRITEUP.md      # Solution architecture & details (Phase 6b)
 ├── Makefile                   # Local task automation
 ├── README.md                  # Project Quick Start
 └── pyproject.toml             # Python dependencies
