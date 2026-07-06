@@ -1985,7 +1985,7 @@ function displayReport(report, crop) {
     document.getElementById('rpt-description').innerText = report.description || 'No description available.';
 
     // Severity bars
-    renderSeverityBars(urgency, confStr);
+    renderSeverityBars(urgency, pctVal);
 
     // Treatment steps
     const tl = document.getElementById('rpt-treatment-list');
