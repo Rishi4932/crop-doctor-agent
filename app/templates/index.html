@@ -1966,9 +1966,20 @@ function displayReport(report, crop) {
     ub.className = 'badge badge-' + getUrgencyClass(urgency);
 
     // Confidence gauge
-    const confStr = typeof report.confidence === 'string' ? report.confidence.replace('%','') :
-                    typeof report.confidence === 'number' ? String(Math.round(report.confidence * (report.confidence <= 1 ? 100 : 1))) : '70';
-    setGauge(confStr);
+    let pctVal = 70; // fallback default
+    if (typeof report.confidence === 'string') {
+        const lowerConf = report.confidence.toLowerCase();
+        if (lowerConf.includes('high')) pctVal = 90;
+        else if (lowerConf.includes('medium')) pctVal = 70;
+        else if (lowerConf.includes('low')) pctVal = 45;
+        else {
+            const parsed = parseInt(report.confidence.replace('%', ''));
+            if (!isNaN(parsed)) pctVal = parsed;
+        }
+    } else if (typeof report.confidence === 'number') {
+        pctVal = Math.round(report.confidence * (report.confidence <= 1 ? 100 : 1));
+    }
+    setGauge(String(pctVal));
 
     // Description
     document.getElementById('rpt-description').innerText = report.description || 'No description available.';
